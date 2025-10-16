@@ -1,0 +1,23 @@
+{
+  "name": "base-hardhat-codespace",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "clean": "rimraf cache artifacts",
+    "compile": "hardhat compile",
+    "test": "hardhat test",
+    "deploy:base": "node --env-file=.env scripts/deploy.js base",
+    "deploy:base-sepolia": "node --env-file=.env scripts/deploy.js baseSepolia",
+    "verify:base": "hardhat verify --network base",
+    "verify:base-sepolia": "hardhat verify --network baseSepolia"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.5"
+  },
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^5.0.0",
+    "hardhat": "^2.22.9",
+    "rimraf": "^6.0.1"
+  }
+}
